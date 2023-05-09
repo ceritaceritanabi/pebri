@@ -5,8 +5,13 @@ dataset = pd.read_csv('y2.csv')
 x = dataset.iloc[:, 0:2].values
 y = dataset.iloc[:, -1].values
 dataset.head()
+
+
+import pycaret
 from pycaret.regression import *
 s = setup(dataset, target = 'y2', session_id=123)
+
+
 best = compare_models()
 
 exp_clf102 = setup(dataset, target = 'y2',
@@ -81,4 +86,3 @@ if st.button('Predict'):
     st.write(' Based on feature values, your wine quality is '+ str(prediction))
 
 
-    
