@@ -30,12 +30,13 @@ import numpy as np
 
 def predict(model, df):
     
-    predictions_df = predict_model(estimator = model, data = input_df)
+    predictions_df = predict_model(estimator = model, data = df)
     return predictions_df['label'[0]
   
                                 
 model = load_model('Orthogonal Matching Pursuit')
 
+                          
 st.title('Thermal Deformation Prediction')
 st.write('This is a web app to predict the thermal deformation based on\
          several features that you can see in the sidebar. Please adjust the\
@@ -63,7 +64,7 @@ st.table(features_df)
 
 if st.button('Predict'):
     
-    prediction = predict(model=model, features_df=features=df)
-    prediction = '$' + (prediction)
+    prediction = predict(model, features_df)
+   
     
-    st.success(' Based on feature values, the thermal deformation is {}'.format(prediction))
+    st.write(' Based on feature values, the thermal deformation is '+ str(prediction))
