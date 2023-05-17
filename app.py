@@ -27,7 +27,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
     
-model = load_model('Orthogonal Matching Pursuit')
 
 def predict(model, df):
     
@@ -35,6 +34,7 @@ def predict(model, df):
     return predictions_df['label'[0]
   
                                 
+model = load_model('Orthogonal Matching Pursuit')
 
 st.title('Thermal Deformation Prediction')
 st.write('This is a web app to predict the thermal deformation based on\
