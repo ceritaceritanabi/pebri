@@ -1,4 +1,39 @@
+import streamlit
+import pycaret
+import pandas as pd
 
+# Importing the df
+df = pd.read_csv('y2.csv')
+x = df.iloc[:, 0:2].values
+y = df.iloc[:, -1].values
+df.head()
+
+
+from pycaret.regression import *
+s = setup(df, target = 'y2', session_id=123)
+
+
+best = compare_models()
+
+
+omp_model = create_model('omp')
+evaluate_model(omp_model)
+predict_model(omp_model)
+
+save_model(omp_model, model_name = 'Bayesian Ridge')
+
+from pycaret.regression import load_model, predict_model
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+
+def predict_quality(model, df):
+    
+    predictions_data = predict_model(estimator = model, data = df)
+    return predictions_data['Label'][0]
+    
+model = load_model('Orthogonal Matching Pursuit')
 
 from pycaret.regression import load_model, predict_model
 import streamlit as st
