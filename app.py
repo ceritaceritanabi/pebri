@@ -10,11 +10,7 @@ dataset.head()
 
 
 from pycaret.regression import *
-s = setup(dataset, target = 'y2', session_id=123,
-         normalize = True,
-           polynomial_features = True, trigonometry_features = True,
-           feature_interaction=True, 
-           bin_numeric_features= ['C-axis rear bearing', 'A-axis rear bearing'])
+s = setup(dataset, target = 'y2', session_id=123)
 
 
 best = compare_models()
