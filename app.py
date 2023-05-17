@@ -26,19 +26,15 @@ from pycaret.regression import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
-
-
     
 model = load_model('Orthogonal Matching Pursuit')
 
 def predict(model, df):
     
     predictions_df = predict_model(estimator = model, data = input_df)
-    predictions = predictions_df['label'[0]
+    return predictions_df['label'[0]
   
                                 
-
-
 
 st.title('Thermal Deformation Prediction')
 st.write('This is a web app to predict the thermal deformation based on\
