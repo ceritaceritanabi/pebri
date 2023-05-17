@@ -1,26 +1,4 @@
-import streamlit
-import pycaret
-import pandas as pd
 
-# Importing the dataset
-dataset = pd.read_csv('y2.csv')
-x = dataset.iloc[:, 0:2].values
-y = dataset.iloc[:, -1].values
-dataset.head()
-
-
-from pycaret.regression import *
-s = setup(dataset, target = 'y2', session_id=123)
-
-
-best = compare_models()
-
-
-omp_model = create_model('omp')
-evaluate_model(omp_model)
-predict_model(omp_model)
-
-save_model(omp_model, model_name = 'Orthogonal Matching Pursuit')
 
 from pycaret.regression import load_model, predict_model
 import streamlit as st
