@@ -28,18 +28,6 @@ import pandas as pd
 import numpy as np
 
 
-def predict_model(model, df):
-    
-    predictions_data = predict_model(estimator = model, data = df)
-    return predictions_data
-    
-model = load_model('Orthogonal Matching Pursuit')
-
-from pycaret.regression import load_model, predict_model
-import streamlit as st
-import pandas as pd
-import numpy as np
-
 
 def predict_quality(model, df):
     
