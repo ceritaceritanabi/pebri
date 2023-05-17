@@ -37,7 +37,7 @@ def predict(model, df):
     predictions = predictions_df['label'[0]
   
                                 
-def run():
+
 
 
 st.title('Thermal Deformation Prediction')
