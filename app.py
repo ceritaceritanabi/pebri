@@ -28,9 +28,9 @@ import pandas as pd
 import numpy as np
 
 
-def predict(model, dataset):
+def predict(model, df):
     
-    predictions_data = predict_model(estimator = model, data = dataset)
+    predictions_data = predict_model(estimator = model, data = df)
     return predictions_data['Label'][0]
     
 model = load_model('Bayesian Ridge')
