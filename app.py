@@ -28,11 +28,10 @@ import pandas as pd
 import numpy as np
 
 
-
 def predict_quality(model, df):
     
     predictions_data = predict_model(estimator = model, data = df)
-    return predictions_data['Label'][0]
+    return predictions_data['Label']['label']
     
 model = load_model('Orthogonal Matching Pursuit')
 
