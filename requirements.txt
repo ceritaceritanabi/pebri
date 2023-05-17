@@ -135,7 +135,7 @@ numpy==1.19.3
 oauthlib==3.2.0
 openpyxl==3.1.2
 opt-einsum==3.3.0
-orjson==3.6.0
+orjson==3.6.1
 packaging==21.3
 pandas==1.1.5
 pandas-profiling==3.1.0
@@ -183,7 +183,7 @@ python-json-logger==2.0.4
 python-multipart==0.0.5
 pytz==2022.1
 pytz-deprecation-shim==0.1.0.post0
-PyWavelets==1.4.1
+PyWavelets==1.2.0
 pywin32==227
 pywinpty==1.1.6
 PyYAML==5.4.1
