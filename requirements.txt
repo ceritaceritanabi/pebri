@@ -44,7 +44,7 @@ cycler==0.11.0
 cymem==2.0.7
 Cython==0.29.34
 databricks-cli==0.8
-dataclasses==0.8
+dataclasses==0.7
 decorator==4.4.2
 defusedxml==0.7.1
 distlib==0.3.6
