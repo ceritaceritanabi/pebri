@@ -20,7 +20,7 @@ omp_model = create_model('omp')
 evaluate_model(omp_model)
 predict_model(omp_model)
 
-save_model(omp_model, model_name = 'Bayesian Ridge')
+save_model(omp_model, model_name = 'Orthogonal Matching Pursuit')
 
 from pycaret.regression import load_model, predict_model
 import streamlit as st
