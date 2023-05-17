@@ -70,4 +70,4 @@ if st.button('Predict'):
     prediction = predict(model=model, features_df=features=df)
     prediction = '$' + (prediction)
     
-    st.success(' Based on feature values, the thermal deformation is {}.format(prediction))
+    st.success(' Based on feature values, the thermal deformation is {}'.format(prediction))
