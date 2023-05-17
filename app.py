@@ -28,7 +28,7 @@ import pandas as pd
 import numpy as np
 
 
-def predict_quality(model, df):
+def predict_model(model, df):
     
     predictions_data = predict_model(estimator = model, data = df)
     return predictions_data['label'][0]
