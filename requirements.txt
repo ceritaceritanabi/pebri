@@ -183,8 +183,8 @@ python-json-logger==2.0.4
 python-multipart==0.0.5
 pytz==2022.1
 pytz-deprecation-shim==0.1.0.post0
-PyWavelets==1.1.1
-pywin32==268
+PyWavelets==1.19.13
+pywin32==227
 pywinpty==1.1.6
 PyYAML==5.4.1
 pyzmq==22.3.0
