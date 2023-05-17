@@ -27,7 +27,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-
+def predict(model, df):
+    
+    predictions_data = predict_model(estimator = model, data = df)
+    return prediction_data['label'][0]
     
 model = load_model('Orthogonal Matching Pursuit')
 
@@ -59,6 +62,6 @@ st.table(features_df)
 
 if st.button('Predict'):
     
-    prediction = predict_model(model, features_df)
+    prediction = predict(model, features_df)
     
     st.write(' Based on feature values, the thermal deformation is '+ str(prediction))
