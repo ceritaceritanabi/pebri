@@ -35,7 +35,7 @@ def predict(model, df):
     
     predictions_df = predict_model(estimator = model, data = input_df)
     predictions = predictions_df['label'[0]
-    return predictions
+    return prediction
                                 
 def run():
 
