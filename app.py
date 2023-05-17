@@ -28,11 +28,6 @@ import pandas as pd
 import numpy as np
 
 
-def predict(model, df):
-    
-    predictions_data = predict_model(estimator = model, data = df)
-    return prediction_data['y2'][0]
-   
     
 model = load_model('Orthogonal Matching Pursuit')
 
