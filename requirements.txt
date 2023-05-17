@@ -4,5 +4,5 @@ streamlit==1.10.0
 pycaret==2.3.10
 flask==1.1.2
 gunicorn==20.1.0
-Scipy>+1.7.3
-Scikit-learn>+3.5.2
+Scipy>=1.7.3
+Scikit-learn>=3.5.2
