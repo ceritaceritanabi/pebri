@@ -16,11 +16,11 @@ s = setup(dataset, target = 'y2', session_id=123)
 best = compare_models()
 
 
-br_model = create_model('br')
-evaluate_model(br_model)
-predict_model(br_model)
+omp_model = create_model('omp')
+evaluate_model(omp_model)
+predict_model(omp_model)
 
-save_model(br_model, model_name = 'Bayesian Ridge')
+save_model(br_model, model_name = 'Orthogonal Matching Pursuit')
 
 from pycaret.regression import load_model, predict_model
 import streamlit as st
@@ -33,7 +33,7 @@ def predict_quality(model, dataset):
     predictions_data = predict_model(estimator = model, data = dataset)
     return predictions_data['Label'][0]
     
-model = load_model('Bayesian Ridge')
+model = load_model('Orthogonal Matching Pursuit')
 
 
 st.title('Thermal Deformation Prediction')
