@@ -28,7 +28,7 @@ import pandas as pd
 import numpy as np
 
 
-def predict_quality(model, dataset):
+def predict(model, dataset):
     
     predictions_data = predict_model(estimator = model, data = dataset)
     return predictions_data['Label'][0]
