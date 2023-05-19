@@ -31,7 +31,7 @@ import numpy as np
 def predict_quality(model, df):
     
     predictions_data = predict_model(estimator = model, data = df)
-    return predictions_data
+    return predictions_data[0][0]
     
 model = load_model('Orthogonal Matching Pursuit')
 
