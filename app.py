@@ -31,7 +31,7 @@ import numpy as np
 def predict_quality(model, df):
     
     predictions_data = predict_model(estimator = model, data = df)
-    return predictions_data 
+    return predictions_data['Label'][0]
     
 model = load_model('Orthogonal Matching Pursuit')
 
@@ -65,4 +65,4 @@ if st.button('Predict'):
     
     prediction = predict_quality(model, features_df)
     
-    st.write(' Based on feature values, the thermal deformation is '+ (prediction))
+    st.write(' Based on feature values, the thermal deformation is '+ str(prediction))
