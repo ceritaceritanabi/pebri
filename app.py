@@ -63,6 +63,6 @@ st.table(features_df)
 
 if st.button('Predict'):
     
-    prediction = predict_quality(model, df)
+    prediction = predict_quality(model, features_df)
     
-    st.write(' Based on feature values, the thermal deformation is '+ str(prediction))
+    st.write(' Based on feature values, the thermal deformation is '+ (prediction))
